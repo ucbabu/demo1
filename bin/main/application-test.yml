@@ -1,0 +1,13 @@
+
+  
+spring:
+  profiles: test
+ 
+  application:
+    name: demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ucb?serverTimezone=UTC
+    username: root
+    password:
+    serverTimezone: EDT
