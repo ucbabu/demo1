@@ -7,6 +7,6 @@ node {
         }
     }
     stage('Build') {
-        ./gradlew build -x test
+        sh './gradlew build -x test'
     }
 }
