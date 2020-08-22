@@ -9,7 +9,9 @@ node {
     stage('Checkout'){
         checkout scm
     }
-    stage('Build') {
-        sh './gradlew clean build -x test'
+    docker.image("openjdk:13-alpine").inside {
+        stage('Build') {
+            sh './gradlew clean build -x test'
+        }
     }
 }
