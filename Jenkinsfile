@@ -10,6 +10,6 @@ node {
         checkout scm
     }
     stage('Build') {
-        sh './gradlew build -x test'
+        sh './gradlew clean build -x test'
     }
 }
