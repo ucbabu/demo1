@@ -6,6 +6,9 @@ node {
             echo 'I execute elsewhere ${env.BRANCH_NAME}'
         }
     }
+    stage('Checkout'){
+        checkout scm
+    }
     stage('Build') {
         sh './gradlew build -x test'
     }
