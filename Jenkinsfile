@@ -17,4 +17,9 @@ node {
     stage('build docker image'){
         sh 'docker build -t demo1ucb .'
     }
+    if (env.BRANCH_NAME == 'master') {
+        stage('deploy'){
+            echo 'Deploy to Test'
+        }
+    }
 }
