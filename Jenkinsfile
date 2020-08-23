@@ -14,4 +14,7 @@ node {
             sh './gradlew clean build -x test'
         }
     }
+    stage('build docker image'){
+        sh 'docker build -t demo1ucb .'
+    }
 }
