@@ -1,6 +1,9 @@
 # Start with a base image containing Java runtime
 FROM openjdk:13-jdk-alpine
 
+ENV APP_USER=ucb
+ENV APP_HOME=/home/ucb
+
 # Add Maintainer Info
 LABEL maintainer="ucbabu@gmail.com"
 
