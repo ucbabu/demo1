@@ -19,9 +19,16 @@ node {
     }
 
     if (env.BRANCH_NAME == 'master') {
-        stage('deploy'){
-            echo 'Deploy to Test'
+        stage('test'){
+            echo 'This is Branch name "${env.BRANCH_NAME}"'
         }
+    }
+    stage('Deploy') {
+            when { tag "v*" }
+            steps {
+                echo 'Deploying only because this commit is tagged...'
+                
+            }
     }
 
 }
