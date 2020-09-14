@@ -1,10 +1,10 @@
 node {
-    for (e in env){
-        echo e + " is" + ${e}
-    }
+    
+
     stage('Example') {
         if (env.BRANCH_NAME == 'master') {
             echo 'I only execute on the env.BRANCH_NAME'
+            echo sh(resturnStdout: true, script: 'env')
         } else {
             echo 'I execute elsewhere env.BRANCH_NAME'
         }
