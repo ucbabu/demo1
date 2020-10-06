@@ -28,7 +28,7 @@ node {
     }
     stage('Deploy') {
             steps {
-                def tag = sh(returnStdout: true, script: "git describe --tags"
+                def tag = sh(returnStdout: true, script: "git describe --tags")
                 echo "Deploying only because this commit is tagged...${tag}"
                 
             }
