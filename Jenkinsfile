@@ -20,7 +20,7 @@ node {
         }
     }
     stage('build docker image'){
-        sh 'docker build -t demo1ucb .'
+        sh 'docker build -t demo1ucb:v0.0.5 .'
     }
 
     if (env.BRANCH_NAME == 'master') {
