@@ -2,6 +2,8 @@ node {
     
 
     stage('Example') {
+         echo "${params}"
+         echo "param tag push ${params.is_tag_push}"
         if (env.BRANCH_NAME == 'master') {
             echo 'I only execute on the env.BRANCH_NAME'
             echo sh(resturnStdout: true, script: 'env')
